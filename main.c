@@ -45,7 +45,7 @@ int main(int argc, char** argv){
 		XEvent e;
 	    XNextEvent(window->display, &e); 
 		
-
+		drawTriangles(mshCube, window, game_engine);
 
 		switch (e.type){
 			case Expose:

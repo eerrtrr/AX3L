@@ -108,6 +108,21 @@ void drawRectangle(window* win, unsigned int x, unsigned int y, unsigned int wid
 		XDrawRectangle(win->display, win->window, win->gc, x, y, width, height);
 }
 
+void drawTriangle(window* win, unsigned int x1, unsigned int y1,unsigned int x2, unsigned int y2, unsigned int x3, unsigned int y3, bool fill){
+	if(fill){
+		XDrawLine(win->display, win->window, win->gc, x1, y1, x2, y2);
+		XDrawLine(win->display, win->window, win->gc, x2, y2, x3, y3);
+		XDrawLine(win->display, win->window, win->gc, x3, y3, x1, y1);
+	}
+
+	else{
+		XDrawLine(win->display, win->window, win->gc, x1, y1, x2, y2);
+		XDrawLine(win->display, win->window, win->gc, x2, y2, x3, y3);
+		XDrawLine(win->display, win->window, win->gc, x3, y3, x1, y1);
+	}
+	
+}
+
 void drawCircle(window* win, unsigned int x, unsigned int y, unsigned int radius, bool fill){
 	if(fill)
 		XFillArc(win->display, win->window, win->gc, x, y, radius, radius, 0, 23040);

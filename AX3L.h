@@ -38,6 +38,7 @@ typedef struct TRIANGLE triangle;
 
 struct MESH{
 	triangle* tris;
+	triangle* projTris;
 	int nbr;
 };
 typedef struct MESH mesh;
@@ -55,7 +56,7 @@ void initializeCoords(mesh* msh, float coords[][12]);
 void projection(mesh* obj, window* win, ge* ge);
 
 
-
+void drawTriangles(mesh* obj, window* win, ge* ge);
 
 
 #endif

@@ -62,6 +62,7 @@ void drawLines(window* win, points* pts);
 
 void drawSqare(window* win, unsigned int x, unsigned int y, unsigned int length, bool fill);
 void drawRectangle(window* win, unsigned int x, unsigned int y, unsigned int width, unsigned int height, bool fill);
+void drawTriangle(window* win, unsigned int x1, unsigned int y1,unsigned int x2, unsigned int y2, unsigned int x3, unsigned int y3, bool fill);
 void drawCircle(window* win, unsigned int x, unsigned int y, unsigned int radius, bool fill);
 void drawElipse(window* win, unsigned int x, unsigned int y, unsigned int width, unsigned int height, unsigned int angle1, unsigned int angle2, bool fill);
 
